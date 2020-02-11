@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+<H1>Formulär</H1>
+    <form action="">
+        <h2>
+        Förnamn
+         </h2>
+        <br>
+        <Input type="text">
+        </h2>
+      
+        <h2>
+        Efternamn
+        <br>
+        <Input type="text"
+        required
+        minlength="5"
+        maxlength="20"
+        placeholder="Ange ditt för- och efternamn">
+        <input type="submit" value="Send">
+        </h2>
+
+        <div>
+        <h3>Vad tycker du om Html</h3>
+        <textarea 
+        placeholder="Ange ditt för- och efternamn"
+        cols="20" rows="5"></textarea>
+        </div>
+        
+        <!--<div>
+        data
+        <input type="data">
+        </div> 
+        <br>-->
+        <br>
+        <div>
+            <label for="birthday">ange datum:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        <br>
+
+        <div>
+            välj kön
+            <input id="female" type="radio" name="gender" value="f">
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender" value="m">
+            <label for="male">Male</label>
+        </div>
+        <br>
+        <div>
+        Favorit pod-tjänster
+        <br>
+        <input type="checkbox" name="service" value="itunes">
+        iTunes
+        <input type="checkbox" name="service" value="syntaxfm">
+        Syntax.fm
+        </div>
+
+        <div>
+            <p>What device do you listen to music on?</p>
+            <select name="devices">
+            <option value="ipod">iPod</option>
+            <option value="radio">Radio</option>
+            <option value="computer" selected >Computer</option>
+            </select>
+
+        </div>
+<br>
+        <div>
+            color:
+            <input type="color">
+        </div>
+
+
+    </form>
+    
+</body>
+</html>
