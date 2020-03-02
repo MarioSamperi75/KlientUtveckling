@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <H1>Callback</H1>
+    <h2>Sinrcono</h2>
+
+
+    <h2>Asincrono</h2>
+
+
+
+<script>
+    //Sinkron
+    console.log('Sincrono');
+    console.log('-------------------------------');
+    console.log('Start');
+    let array =['A','B','C'];
+
+    array.forEach(function(element){
+        console.log(element);
+    })
+    console.log('Finish');
+
+    console.log("");
+    //Asinkron
+    console.log('Asincrono');
+    console.log('-------------------------------')
+
+    console.log('Start');
+
+    setTimeout(function(){
+        for(let i of array){
+            console.log(i);
+        }
+    }, 1000)
+    console.log('Finish');
+
+
+</script>
+  
+    
+</body>
+</html>

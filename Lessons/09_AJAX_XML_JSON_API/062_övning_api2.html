@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>övning dog api2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+
+
+
+    <body class="container">
+        <h1 class="text-center">Random User API</h1>
+        
+        <div class="card mx-auto" style="width: 18rem;">
+            <img src="#" class="card-img-top" alt="Random user">
+            <div class="card-body">
+              <h5 class="name"></h5>
+              <p class="age">Age:</param>
+              <p class="city">City:</p>
+              <a href="#" class="contact btn btn-primary">Contact Me</a>
+            </div>
+          </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("https://randomuser.me/api/",
+                function (response) {
+                    console.log(response); //guarda cos'e' l'oggetto e vedi che ti serve. message contiene l'url!!!
+
+                    //kanske lite chaching...?    
+
+                    $(".card-img-top").attr('src', response.results[0].picture.large);
+                    $(".name").append( response.results[0].name.first + " " + response.results[0].name.last);
+                    $(".age").append( response.results[0].dob.age);
+                    $(".city").append(response.results[0].location.city);
+
+                });
+        });
+    </script>
+
+</body>
+
+</html>

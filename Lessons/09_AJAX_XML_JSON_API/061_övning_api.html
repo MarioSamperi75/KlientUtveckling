@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>övning dog api</title>
+<style>
+
+    body{
+        text-align: center;
+    }
+    img {
+        height: 400px;
+        width:  auto;
+        border-style: solid;
+        }
+    
+</style>
+</head>
+
+
+<body>
+
+    <h2>LIST ALL BREEDS</h2>
+    <div id="demo" ></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://dog.ceo/api/breeds/image/random",
+            function(response) {
+                console.log(response); //guarda cos'e' l'oggetto e vedi che ti serve. message contiene l'url!!!
+                
+                $("#demo").html("<img src =" + response.message +">");
+                //+elegante//$("img").attr('src', response.message);
+                
+            });
+        });
+    </script>
+    
+</body>
+</html>

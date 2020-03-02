@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Kurs(namn, lärare, poäng, betyg){
+            this.namn = namn;
+            this.lärare = lärare;
+            this.poäng = poäng;
+            this.betyg = betyg;
+}
+
+    let JAVA19_UTV = new Kurs("Java-utveckling", "Mahmud Al Hakim", 20, "VG");
+    let JAVA19_OBJP = new Kurs("Objektorienterad programmering och Java", "Sigrun Olafsdottir", 55, "VG");
+    let JAVA19_OOAD = new Kurs ("Objektorienterad analys och design", "Robert Kärrbrant", 15, "VG");
+    let JAVA19_DBTEK = new Kurs("Databasteknik och Java", "Sigrun Olafsdottir", 50, "VG");
+    let JAVA19_KLIENT = new Kurs("Klientutveckling", "Mahmud Al Hakim", 30, "IG");
+
+    let kurser = [JAVA19_UTV, JAVA19_OBJP, JAVA19_OOAD, JAVA19_DBTEK, JAVA19_KLIENT];
+
+    console.log (kurser);
+    console.log (kurser[0]);
+    console.log (kurser[0].namn);
+    </script>
+    
+</body>
+</html>

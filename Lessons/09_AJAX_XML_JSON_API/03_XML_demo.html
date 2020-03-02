@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML demo</title>
+</head>
+<body>
+
+    <button id="loadBtn">Hämta data från XML</button>
+    <ul id="list"></ul>
+
+    <script>
+        let loadBtn = document.getElementById("loadBtn");
+        loadBtn.addEventListener("click", loadXML);
+
+
+        function loadXML() {
+
+            //Skapa objekt
+            let xhr = new XMLHttpRequest();
+
+            //skapa request
+            xhr.open("GET", "03_XML_demo.xml", true);
+
+            //skicka
+            xhr.send();
+
+            //funktion onreadystatechange
+            xhr.onreadystatechange = function() {
+                console.log('laddar XML...')
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this);
+
+                //inte responseText men responseXML
+                //responseXML är lite mer strukturerad än en text:vi jobbar lite för att fånga vad vi vill
+                let xml = this.responseXML;
+                let ARTISTS = xml.getElementsByTagName("ARTIST"); //tag som HTML!
+                console.log(ARTISTS);
+                for (let ARTIST of ARTISTS){
+                    console.log(ARTIST);
+                    list += "<li>" + ARTIST.textContent + "</li>";
+                    document.getElementById("list").innerHTML = list;
+                }
+            }
+            };
+}
+
+
+
+
+    </script>
+
+  
+    
+</body>
+</html>

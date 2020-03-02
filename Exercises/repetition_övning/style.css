@@ -1,0 +1,25 @@
+h1,h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 16px;
+}
+
+h2 {
+    color: rgb(47, 3, 58);
+    font-size: 12px;
+
+}
+
+.postit {
+
+    background-color: #fbff00;
+    width: 300px;
+    padding: 10px 10px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: thin;
+
+}

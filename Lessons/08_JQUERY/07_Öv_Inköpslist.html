@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inköplist</title>
+</head>
+<body><h1>inköplista</h1>
+
+   
+    <h2>Vad vill du handla idag?</h2>
+    <input id="input" type="text">
+    <button id="button">add</button>
+    <button id="toggle">slideToggle</button>
+
+    <ul id = "list">
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>/*
+    
+        $(document).ready(function() {
+            $("#button").click(function() {
+                let $new = $("#input").val();
+                $("ul").append ("<li>" + $new + "<button class='taBort'>ta bort</button> </li>");
+                $("#input").val("");
+            });
+
+
+
+            
+            $("#list").on('click', '.taBort' , function () {
+                $(this).parents('li').remove();
+      });
+
+
+        $("#toggle").click(function(){
+        $("#list").slideToggle();
+        });
+            
+
+        })
+
+*/
+    </script>
+
+
+
+
+<script>
+    
+    $(document).ready(function() {
+
+
+        // funktion: att anropa på olika sett
+        function addItem() {
+            let $new = $("#input").val();
+            $("ul").append ("<li>" + $new + "<button class='taBort'>ta bort</button> </li>");
+            $("#input").val("");
+        }
+
+
+        //click på add
+        $("#button").click(function() {
+            addItem();
+        });
+
+
+        //key press
+        $("#input").keypress(function (event) {
+          // console.log(event.which);
+          if(event.which === 13) // 13 är tangentens Enter ASCII-kod 
+            addItem();
+      })
+
+        //eller bara anonymfunktion : då anropar man ingentin
+      /*  
+            $("#button").click(function() {
+                let $new = $("#input").val();
+                $("ul").append ("<li>" + $new + "<button class='taBort'>ta bort</button> </li>");
+                $("#input").val("");
+            });
+        */
+
+        
+        $("#list").on('click', '.taBort' , function () {
+            $(this).parents('li').remove();
+  });
+
+
+    $("#toggle").click(function(){
+    $("#list").slideToggle();
+    });
+        
+
+    })
+
+
+</script>
+    
+</body>
+</html>

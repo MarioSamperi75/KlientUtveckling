@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo">Mouseenter och Mouseout</h2>
+
+    <h2 id="demo2">Mousedown och Mouseup</h2>
+
+    Namn <input type="text"> 
+    E-post <input type="text">
+
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#demo").mouseenter(function(){
+                $(this).html("Demo på mouseenter!");
+            });
+            $("#demo").mouseout(function(){
+                $(this).html("Demo på mouseout!");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#demo2").mousedown(function(){
+                $(this).html("Demo på mousedown!");
+            });
+            $("#demo2").mouseup(function(){
+                $(this).html("Demo på mouseup!");
+            });
+        });
+
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "gold");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "white");
+            });
+});
+
+    </script>
+    
+</body>
+</html>

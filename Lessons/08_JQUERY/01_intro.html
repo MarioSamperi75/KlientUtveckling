@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro jquery</title>
+</head>
+<body>
+  
+        <script src="jquery-3.4.1.js">// <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <script> // meglio un file separato
+        $(document).ready(function() {
+    
+                console.log("Hello jQuery!");
+
+                //SELECTORS
+                //element- nascondere i p tag 
+                $("h1").hide(2000).show(2000);
+                $("p").hide(500);
+
+                //id- fade out e nascondere 
+                $("#demo").fadeOut();  //för att invisible
+
+                //class demo Hide and show efter 500ms
+                $(".demo").hide();
+                $(".demo").show(1500);
+
+                //hide this by click (this and event)
+                $(".demo2").click(function(){
+                    $(this).fadeOut();
+                });
+
+        });
+
+
+        </script>
+        <h1>h1 tag</h1>
+        <p>p tag</p>
+        <h1>h1 tag</h1>
+        <p>p tag</p>
+        <h1 id ="demo">id- fade out e nascondere </h1>
+        <p>p tag</p>
+        <h1>h1 tag</h1>
+        <h1 class="demo">class demo hide and show efter 1500ms</h1>
+        <h1 class="demo">class demo hide and show efter 1500ms</h1>
+        <h1 class="demo2">hide this by click (this and event)</h1>
+        <h1 class="demo">class demo hide and show efter 1500ms</h1>
+        
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .cool {color: white; background-color: black;} 
+    </style>
+</head>
+<body>
+    <h1 id="one"></h1>
+
+    <p>Stycke 1</p>
+    <p>Stycke 2</p>
+    <p>Stycke 3</p>
+<script>
+    //Metoder för att hitta ett enda element
+    // 1.Get elementById()
+
+    let h1 = document.getElementById('one');
+
+    //Metoder
+     h1 = document.querySelector('#one');
+
+     //anvenda # annars letar efter elementet 'one' och finns inte = null!!
+    
+
+    //manipulera HTML-egenskaper
+    h1.innerHTML = 'Arbeta med Dom';
+    h1.style.color = 'maroon';
+    //font-size blir fontSize. Finns allt men med camelCase
+    h1.style.fontSize = '3em';
+
+
+    //för att hitta alla tre p
+    p = document.querySelectorAll('.demo');
+    //returnerar en NodList (med forEach)
+
+    p.forEach(function(x){
+        console.log(x);
+    element.style.color= 'green'})
+
+
+//inte NodList no foreach. måste används normal for looå
+    p = document.getElementsByTagName('p');
+
+
+    
+    p.forEach(element => element.className ='cool')
+
+
+    console.log(p);
+
+    let p2 = document.getElementsByTagName('p');
+    for (let i = 0; i < p.length; i++) {
+    p2[i].className = 'cool';
+    }
+
+
+    
+
+    
+</script>
+</body>
+</html>

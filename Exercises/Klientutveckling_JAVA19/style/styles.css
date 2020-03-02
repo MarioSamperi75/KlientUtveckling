@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'exotica';
     src: url('../font/exotica-webfont.woff2') format('woff2'),
-         url('../font/exotica-webfont.woff2') format('woff');
+         url('../font/exotica-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -30,11 +30,12 @@ body{
 
 h1  {
     /*background-color: rgb(93, 102, 190);*/
-    font-family:  amadeusregular, Times, serif;
+    font-family:  exotica, Times, serif;
     font-weight: normal;
-    /*text-align: center;*/
-    text-indent: 120px;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: center;
+    /*text-indent: 120px;*/
+
+    /*text-shadow: 2px 2px 4px rgb(0, 0, 0);*/
     font-size: 92px;
     line-height: 0.69em;
     color: rgb(18, 5, 199);
@@ -43,23 +44,65 @@ h1  {
 h2  {
     /*background-image: url(../image/testa.jpg);*/
     font-family:  Georgia, Times, serif;
-    text-indent: 240px;
+    min-width: 300;
+    /*text-indent: 240px;*/
+    text-align: center;
     font-size: 36px;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     /*text-align: center;*/
-    line-height: 3.0em;
+    line-height: 1.0em;
     color: rgb(18, 5, 199);
 }
 
 
+div.tabella {
+    height:300px;
+    width: 640px;
+    margin: 10px auto 10px auto;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: thick;
+    
+    box-shadow: 4px 4px 8px 4px #000000;
+        -moz-box-shadow: 4px 4px 8px 4px #000000;
+        -webkit-box-shadow: 4px 4px 8px 4px #000000;
+
+    border-radius: 8px;   
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px; 
+
+    background-color: rgb(50, 75, 104);
+    
+    padding: 20px 0 ;
+    
+}
+
+
 table  {
-    padding: 6px 12px 6px 12px;
-    font-size: 24px;
+    
+    height: 100% ;
+    width: auto;
+    border-style: solid;
+    border-color: rgb(18, 5, 199);;
+    border-width: thick;
+    margin: auto;
+    font-size: 14px;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    /*opacity: 0.5;*/
+    background-color: rgb(106, 109, 117);
+    empty-cells: hide;
+    border-spacing: 5px 5px;
+    border-radius: 8px;   
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px; 
     
+}
+
+td  {
+    border-style: ridge;
+    border-color: rgb(50, 75, 104);
+    border-width:thick;
+    background-color:  rgb(203, 221, 241);;
 }
 
 a:link {color:rgb(61, 30, 148); text-decoration: none;}
@@ -69,3 +112,24 @@ a:link {color:rgb(61, 30, 148); text-decoration: none;}
     text-decoration: underline;}
     a:active {
     color: rgb(255, 238, 0);}
+
+/*p.bordi {
+    border-color: indigo;
+    border-width: 2px;
+    
+}*/
+
+
+/*p   {
+    border-color: indigo;
+    border-width: thick;
+    font-size: 18px;
+    line-height: 1.5;
+    min-width: 200px;
+    max-width: 400px;
+    
+    min-height: 80px;
+    max-height: 150px ;
+    overflow: scroll;
+    //overflow: hidden;
+}*/

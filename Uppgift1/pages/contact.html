@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="../style/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="heading">
+            <h1 class="my-name">Mario Samperi</h1>
+            <a href="../index.html">Home</a>
+            <a href="../pages/portfolio.html">Portfolio</a>
+            <a href="../pages/contact.html" class="current">Contact</a>
+        </div>
+
+        <div class="pagebody">
+
+            <h1 class="label">My data</h1>
+            <br>
+            <div class="contact-block">
+                <div class="my-data">
+                    <p>Mario Samperi</p>
+                    <p>Klippagatan 20</p>
+                    <p>11635 Stockholm</p>
+                    <p>mariosamperi@yh.nackademin.se</p>
+                </div>
+
+                <iframe class = "map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2036.1738699788802!2d18.085776715579904!3d59.31335358165324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77f875747189%3A0xf24aafb87b415d2a!2sKlippgatan%2020%2C%20116%2035%20Stockholm!5e0!3m2!1ssv!2sse!4v1581771997954!5m2!1ssv!2sse"
+                    width="400" height="300" style="border:0;" allowfullscreen="">
+                </iframe>
+            </div>
+
+
+            <br><br><br>
+            <h1 class="label">Contact me</h1>
+            <br>
+            <form>
+                <div class="contact-label">
+                    <h4>your name</h4>
+                    <Input id= "your-name" type="text" />
+                </div>
+
+                <div class="contact-label">
+                    <h4>your e-post</h4>
+                    <Input id= "your-epost" type="text" required minlength="5" maxlength="20">
+                </div>
+
+                <div>
+                    <h4>your message</h4>
+                    <textarea id= "your-message" cols="20" rows="5"></textarea>
+                    <br>
+                    <input id ="send" type="submit" value="Send" >
+                </div>
+            </form>
+        </div><!-- pagebody -->
+
+        <div class="closing">
+            Copyright 2020 all right reserved. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+            laboriosam minima veritatis voluptates tenetur quae amet, quos reiciendis?
+        </div>
+    </div><!-- container -->
+
+</body>
+
+</html>

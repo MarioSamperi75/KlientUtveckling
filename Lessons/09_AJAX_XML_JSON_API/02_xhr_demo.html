@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr demo</title>
+</head>
+<body>
+    <h1>XHR</h1>
+    <p id= "demo"></p>
+    <script>
+
+        let xhr = new XMLHttpRequest();
+        console.log(xhr); //guarda per vedere cos'e' un oggetto XMLHttpRequest
+
+        //skapa en request
+        xhr.open('GET', '02_xhr_demo.txt', true); //method, url, synkron/asynkron
+
+        //skicka request
+        xhr.send();
+
+        //metoden onreadystatechange
+        xhr.onreadystatechange = function() {   //ogni volta che cambia stato fa sta roba (html e console.log)
+            console.log(this);//alltid bra att kolla vad som är för objekt
+            console.log("kolla lite på properties")
+            console.log(this.readyState + " " + this.responseText + " " + this.status + " " + this.statusText );
+            
+            if (this.readyState == 4 && this.status == 200) {
+                
+                console.log("laddar text...");
+
+                console.log(this.responseText);
+                document.getElementById('demo').innerHTML =
+                this.readyState + " " +this.responseText;
+
+            }
+        };
+
+     
+    </script>
+</body>
+</html>

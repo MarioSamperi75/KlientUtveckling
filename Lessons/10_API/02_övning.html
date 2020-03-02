@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorageöv</title>
+</head>
+<body>
+    <h3>Övning</h3>
+    <h1>Ange dina favoritspråk</h1>
+    <input id="input" type="text"> <button id="button">add</button>
+    <ul id="list"></ul>
+    <button id="clear">Clear</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        
+        $(document).ready(function () {
+
+            $button = $('#button');
+            $button2 = $('#button2');
+            $clear = $('#clear');
+            $array=JSON.parse(localStorage.getItem("språk"));
+
+            if ($array==null)
+                    $array = [];
+            
+            for(let i=0; i<$array.length; i++){
+                    $element= JSON.parse(localStorage.getItem("språk"))[i];
+                    $('#list').append("<li>" + $element + "</li>");
+                }
+            
+
+            $button.click(function(){
+                let $input = $("#input").val();
+                if ($input !=""){
+                    $('#list').append("<li>" + $input + "</li>");
+                    $array.push($input)
+                    $('#input').val('');
+                    localStorage.setItem("språk", JSON.stringify($array));
+                }
+
+            });
+
+
+            $clear.click(function(){
+                localStorage.clear();
+                $('#list').html(''); //empty()?
+                $array = [];
+            });
+
+        })
+
+
+        
+
+
+        //localStorage.setItem("myObj", JSON.stringify(myObj));
+        //getObj = JSON.parse(localStorage.getItem("myObj"));
+
+    
+    </script>
+</body>
+
+
+</html>

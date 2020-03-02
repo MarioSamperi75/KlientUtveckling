@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch_table_övning</title>
+
+    <style>
+       
+
+            *{
+        box-sizing: border-box;
+        }
+     
+        h1{
+            border-style:hidden;
+            background-color: aliceblue;
+            margin: 0px;
+            padding: 2%;
+            border-bottom: 2px;
+            border-style: outset;
+        }
+        .name{
+            font-weight: bold;
+        }
+
+        body {
+            text-align: center;
+            width: 960px;
+            margin: 0 auto;
+            border-style: solid;
+        }
+        #container {
+            padding: 3%;
+            background-color:rgb(0, 0, 0);
+        }
+        .innerblock{
+           background-color: aliceblue;
+            margin: 2%;
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+            border-style: solid;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Övning table</h1>
+    <div id="container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(resp => resp.json())
+            .then(json => showUsers(json))//.then(json => console.log(json))
+            .catch(err => console.error(err))
+            if ( Modernizr.flash ) {
+            alert( 'Your browser supports flash.');
+            } else {
+            alert('Your browser does not support flash.');
+            }
+
+
+
+            function  showUsers(users){
+                let div="";
+                console.log(users)
+                users.forEach(user => { 
+                div +=`
+                        <div class="innerblock">
+                            <p class="name"> ${user.name}</p>
+                            <p>${user.address.street}</p>  
+                            <p>${user.address.suite}</p>  
+                            <p>${user.address.city}</p> 
+                            <p>${user.address.zipcode}</p> 
+                        </div>
+                    `;
+                });
+                div +='</div>';
+
+                $("#container").html(div);
+               // document.getElementById('table').innerHTML = table;
+            }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Json Demo</title>
+    </head>
+    <body>
+
+        <button id="loadBtn">Hämta data från Json</button>
+        <ul id="list"></ul>
+        <div id ="div"></div>
+
+        <script>
+            let loadBtn = document.getElementById("loadBtn");
+            loadBtn.addEventListener("click", loadJSON);
+
+
+
+
+            function loadJSON() {
+
+                
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "04_Json_demo.json", true);
+                xhr.send();
+                xhr.onreadystatechange = function() {
+                    console.log("laddar Json...")
+                //skapa, request, send come per txt e XML        
+
+                if (this.readyState == 4 && this.status == 200) {
+                        console.log(this);//bra att kolla vad som är för objekt
+
+                        //VIKTIGT!!!PARSA Json responseText, sen kan du jobba med den
+                        let json = JSON.parse(xhr.responseText);
+
+                        //man kan rör sig i objektet genom punktnotation
+                        console.log(json.name);
+                        console.log(json.company.address)
+
+                        //om du vill ha hela "sub-objekt" company, serializera den med stringify
+                        document.getElementById("list").innerHTML = json.name + " " +json.email + JSON.stringify(json.company);
+
+                        document.getElementById('div').innerHTML = JSON.stringify(json);
+
+                }
+            };
+    }
+        </script>
+
+    </body>
+</html>

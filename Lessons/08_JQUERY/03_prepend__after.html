@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prepend...after</title>
+    <style> .blue {
+        color: blue;
+    }
+
+    .agua {
+        background-color: aqua;
+    }
+    </style>
+</head>
+<body>
+    <script src="jquery-3.4.1.js"></script>
+    <ul>
+        <li><a href="https://www.gazzetta.it"> Item</a></li>
+    </ul>
+    <button>vit</button>
+    <p>prova toggle</p>
+    <script>
+        $("ul").prepend("<li>Start</li>");
+        $("ul").append("<li>End</li>");
+
+        $("ul").before("<p>Before the list</p>");
+        $("ul").after("<p>After the list</p>");
+
+        //cambia l'attributo!! //se c'e' gia'? se non c'e'?
+        $('a').attr('target','_blank');
+        //fånga och visa attributet
+        $attr=$("a").attr('target')
+        console.log("attr:" + $attr);
+
+        /*$(document).ready(function() {
+            $("button").click(function() {
+        
+            $("p").toggleClass("blue");
+            $("p").html ("cambia testo");
+            $(this).html ("new");
+
+            });
+        });*/
+
+        $(document).ready(function() {
+            let $button = $("button")    //ine bättre att deklarera inom andra funktionen?
+                    
+            $button.click(function() {
+              
+               /* if ($button.text() == 'vit'){
+                    $button.text('blue');
+                    $button.toggleClass("agua")
+                }
+                else{
+                    $button.text('vit');
+                    $button.toggleClass("agua");
+                }*/
+
+               
+                $(this).toggleClass("agua")
+                $button.text() == "vit" ? $button.text("blue") : $button.text("vit");
+                         
+            });
+        });
+
+    </script>
+</body>
+</html>

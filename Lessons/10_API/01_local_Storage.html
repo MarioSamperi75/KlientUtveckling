@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local_storage</title>
+</head>
+    <body>
+        <div id="table"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+
+        localStorage.setItem("nome", "Mario");
+        localStorage.setItem("cognome", "Samperi");
+        localStorage.setItem("età", "26");
+        localStorage.setItem("professione", "Javautvecklare");
+
+        //--------------------
+
+       
+
+
+        //get
+        console.log(localStorage.key(0)); // get key name geneom index
+        console.log(localStorage.getItem("nome")); //get value genome key name
+        console.log(localStorage.getItem(localStorage.key(0))); //get value genom key index!!!
+
+
+        let myArray = ['Mario','Samperi','Altomonte'];
+        localStorage.setItem("myArray", JSON.stringify(myArray));
+        getArray = JSON.parse(localStorage.getItem("myArray"));
+        console.log(getArray[0]);
+        console.log(JSON.parse(localStorage.getItem("myArray"))[0]);
+        
+
+
+        let table='<table border=1>';
+        for (let i = 0; i < localStorage.length; i++) {            
+                table +=`
+                        <tr><td> ${localStorage.key(i)}</td><td>${localStorage.getItem(localStorage.key(i))}</td></tr>                     
+                    `;
+                }
+                table +='</table>';
+
+                $("#table").html(table);
+           
+        
+
+        
+        </script>
+    </body>
+</html>

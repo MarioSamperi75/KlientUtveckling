@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX-Jquery-demo</title>
+</head>
+<body>
+
+    <button id="loadBtn">Hämta data från Ajax via Json</button>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+            $("#demo").load("02_xhr_demo.txt", function(response , status, xhr){
+                console.log(this);
+                console.log(response);
+                console.log(status);
+                console.log(xhr);
+            });
+        
+
+            $.getJSON("04_Json_demo.json", function(response, status, xhr){
+                console.log(response);
+                console.log(status);
+                console.log(xhr);
+                $("#demo").html(response.name + '<br>' +
+                response.phone );
+            });
+        });
+
+
+
+    </script>
+
+  
+    
+</body>
+</html>

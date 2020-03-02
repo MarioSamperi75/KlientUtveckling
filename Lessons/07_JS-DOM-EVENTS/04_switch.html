@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getDay(){
+            let day;
+            switch (new Date().getDay()) {
+                case 0: day = "söndag"; break;  //getDay... 0 är söndag och så vidare
+                case 1: day = "måndag"; break;
+                case 2: day = "tisdag"; break;
+                case 3: day = "onsdag"; break;
+                case 4: day = "torsdag"; break;
+                case 5: day = "fredag"; break;
+                case 6: day = "lördag"; break;
+            }
+            return day;
+            }
+            console.log('Det är ' + getDay() + ' idag!');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Special+Elite&display=swap');
+
+*{
+ box-sizing: border-box;
+}
+    
+body{
+    background-color: black;
+    
+}
+    .container{
+        background-image: url("../images/sfondo4.png");
+        width: 960px;
+        margin: 0 auto;
+    }
+
+            .heading {
+                margin: 0 auto;
+                font-family: 'Special Elite', cursive;
+                position: relative; 
+                width: 100%;
+                padding: 0.1em;
+                text-align: center;
+                background-color:  rgba(37, 236, 163, 0.6);
+                border-radius: 8px;
+               
+            }
+
+                    .my-name{
+                        font-size: 24px;
+                        margin-top: 12px;
+                        color: rgba(19, 41, 33);
+                        
+                    }
+
+                    .heading a{
+                    padding: 5px;
+                    }
+
+                    .heading a:link {color: rgb(74, 241, 23); text-decoration: none;}
+                    .heading a:visited {    color: rgb(74, 241, 23);}
+                    .heading a:hover {
+                        color: rgb(0, 0, 0);
+                        font-weight: bold;
+                        text-shadow: 2px 2px 4px rgb(74, 241, 23);
+                    }
+                    .heading a:active {
+                        font-weight: bold;
+                        color: rgb(74, 241, 23);
+                    }
+
+                    .current{
+                        color: rgb(74, 241, 23);
+                        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+                    }
+
+
+
+            .closing{
+                position: relative;
+                width: 960px;
+                font-size: 12px;
+                line-height: 40px;
+                margin: auto;
+                text-align: center;
+                background-color:  rgba(37, 236, 163, 0.6);
+                border-radius: 8px;
+                
+            }
+
+
+        
+            .pagebody {
+                position: relative;
+                text-align: center;
+                margin-top: 4%;
+            }
+                    .home-block{
+                        margin: auto;
+                        padding:14px ;
+                        background-color:  rgba(19, 41, 33, 0.6);
+                        border-radius: 8px;
+                        width: 52em;
+                    }
+
+                            .foto{
+                                max-width: 25%;
+                                height: auto;
+                                border-radius: 8px;
+                            }    
+
+                            .my-description {
+                                /*inte speciellt "under bilden", men jag använder figcaption i portfolio,
+                                om det var det meningen */
+                                display: inline-block;
+                                vertical-align: 80px;
+                                font-family: 'Alegreya Sans', sans-serif;
+                                font-size: 17px;
+                                font-weight: bold;
+                                margin-left: 10px;
+                                padding-top: 25px;
+                                padding-left: 22PX;
+                                padding-right: 22px;
+                                height: 132px;
+                                color:  rgba(19, 41, 33);
+                                background-color: rgba(245, 255, 207, 0.8);
+                                border-radius: 8px;
+                            }
+
+                            .multicolumn p{
+                                background-color: rgba(245, 255, 207, 0.8);
+                                font-family: 'Alegreya Sans', sans-serif;
+                                display: inline-block;
+                                border-radius: 8px;
+                                width: 250px;
+                                margin: 4px;
+                                padding: 4px;
+                                padding-bottom: 10px;
+                            }
+
+
+
+
+                    .portfolio-block{
+                        margin: auto;
+                        padding:10px ;
+                        background-color:  rgba(19, 41, 33, 0.6);
+                        border-radius: 8px;
+                        margin-bottom: 2%;
+                        width: 45%;
+                    }
+
+                            .label{
+                                margin: auto;
+                                width: 22%;
+                                background-color:   rgba(19, 41, 33, 0.6);
+                                border-radius: 8px;
+                                font-family: 'Special Elite', cursive;                  
+                                text-shadow: 1px 1px 3px rgb(74, 241, 23);
+                                margin-bottom: 0px;
+                            }
+
+                            .screenshot {
+                                position: relative;
+                                margin-top: 20px;
+                                border-radius: 8px;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            figcaption{
+                                color: rgb(0, 0, 0);
+                                background-color: rgba(245, 255, 207, 0.8);
+                                border-radius: 8px;
+                                text-align: left;
+                                margin: auto;
+                                padding: 3px;
+                                padding-left: 15px;
+                                font-size: 15px;
+                                width: 100%;
+                            }
+
+                            figcaption img:hover{
+                               opacity: 0.5;
+                               /*inte så mycket att formattera (bara en liten bild). länkar i navigator får en mer detaljerad formattering*/ 
+                            }
+
+                            .label{
+                                margin: auto;
+                                width: 22%;
+                                background-color:   rgba(19, 41, 33, 0.6);
+                                border-radius: 8px;
+                                font-family: 'Special Elite', cursive;                  
+                                text-shadow: 1px 1px 3px rgb(74, 241, 23);
+                                margin-bottom: 0px;
+                            }
+
+
+
+                
+                    .contact-block{
+                        background-color:  rgba(19, 41, 33, 0.6);;
+                        margin: auto ;
+                        border-radius: 8px;
+                        width: 720px;
+                    }
+
+                            .my-data{
+                                display: inline-block;
+                                margin-top: 30px;
+                                margin-left: 30px;
+                                padding: 30px;
+                                padding-top: 45px;
+                                height: 240px;
+                                border-radius: 8px;                              
+                                vertical-align: top;
+                                background-color: rgba(245, 255, 207, 0.8);
+                            }
+
+                            .map{
+                                display: inline-block;
+                                padding: 30px;
+                                border-radius: 8px;
+                            }
+
+                    form{   /*i contact-block*/ 
+                        background-color:   rgba(19, 41, 33, 0.6);
+                        margin: auto;
+                        margin-bottom: 50px;
+                        padding: 20px;
+                        border-radius: 8px;
+                        width: 500px;
+                    }
+                            form h4{
+                                font-family: 'Special Elite', cursive;
+                                text-shadow: 1px 1px 3px rgb(74, 241, 23);
+                                margin: 5px;
+                                text-align: center;
+                            }
+                            .contact-label{
+                                display: inline-block;
+                                margin-right: 10px;
+                                margin-left: 10px;
+                                margin-bottom: 30px;
+                                
+                            }
+    
+                            #your-name , #your-epost {
+                                background-color: rgba(245, 255, 207, 0.8);
+                            }
+                            
+                            #your-message{
+                                width: 370px;
+                                background-color: rgba(245, 255, 207, 0.8);
+                            }
+
+                            #send{
+                                background-color: black;
+                                width: 60px;
+                                height: 30px;
+                                font-size: 16px;
+                                font-weight:bolder;
+                                border-color: rgb(20, 51, 22);
+                                font-family: 'Special Elite', cursive;
+                                text-shadow: 1px 1px 3px rgb(74, 241, 23);
+                                margin: 5px;
+                                text-align: center;
+                            }
+                            

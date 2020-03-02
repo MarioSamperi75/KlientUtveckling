@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caching</title>
+    <style>
+        .hot{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+  
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                //caching
+        
+                let $myPItems = $('p');
+                $myPItems.addClass('hot');
+                $(".hot").fadeOut(2000); 
+
+                //chaining
+                $("h1").hide().show(2000);
+               
+
+                //modifiera innehållet .html()
+                $('.demo3').html("Metoden <i>html()</i>.");
+                let $demo3 = $('.demo3').html();
+                console.log("get .html: " + $demo3);
+
+                
+                
+                //.val()
+                $('#input').val("Ciao Mamma");    //som setter
+                let $input = $('#input').val(); console.log("get .val: " + $input);  //som getter
+                
+
+                //.remove()
+    
+                $("#attRemove").remove();
+
+                //hide vi vet
+
+                //empty
+
+               // $("div").empty(); //skillnad med remove? formattering?
+            
+            
+
+            });
+
+        </script>
+
+        <h1>chaining hide and show</h1>
+        <p>alla p blir hot (blue!!) och försvinner</p>
+        <input id="input" value="TEST">
+        <p>alla p blir hot (blue!!) och försvinner</p>
+        <h1 id ="demo">h1 tag id demo</h1>
+        <p>alla p blir hot (blue!!) och försvinner</p>
+        <h1>chaining hide and show</h1>
+        <div id="div" style="background-color: aqua; border-style: ridge;">qui comincia il div
+            <h1 class="demo">class demo</h1>
+            <h1 class="demo3">modifiera innehållet .html()</h1>
+            <h1 class="demo2">class demo2</h1>
+            <h1 class="demo" id = "attRemove">class demo att remove</h1>
+        </div>
+        
+    
+</body>
+</html>

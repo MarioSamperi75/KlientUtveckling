@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dog api demo</title>
+</head>
+<body>
+
+    <h2>LIST ALL BREEDS</h2>
+    <ol id="breeds"></ol>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://dog.ceo/api/breeds/list/all", function(response) {
+
+                console.log(response);
+                console.log(response.message);
+                console.log(response.message.bulldog[1]);
+
+                $.each(response.message, function(index, array) {//eller k,v
+                $("#breeds").append("<li>" + index + "</li>");
+                });
+            });//Json
+        });//ready
+    </script>
+    
+</body>
+</html>
